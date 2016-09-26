@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get                            update
 apt-get -y --no-install-recommends install wget
 
-wget https://download.ceph.com/keys/release.asc -O - | apt-key add -
+wget --no-check-certificate https://download.ceph.com/keys/release.asc -O - | apt-key add -
 
 
 echo 'deb https://download.ceph.com/debian-jewel xenial main' > /etc/apt/sources.list.d/ceph.list
