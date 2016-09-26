@@ -23,3 +23,5 @@ cd uwsgi-master
 UWSGI_PROFILE=rados UWSGI_BIN_NAME=/usr/local/bin/uwsgi make
 
 rm -rf /var/lib/apt/lists/*
+cd /
+rm -rf /tmp/uwsgi-master
