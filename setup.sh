@@ -1,8 +1,8 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-apt-get update
-apt-get install -y wget
+apt-get                            update
+apt-get -y --no-install-recommends install wget
 
 wget https://download.ceph.com/keys/release.asc -O - | apt-key add -
 
@@ -10,8 +10,8 @@ wget https://download.ceph.com/keys/release.asc -O - | apt-key add -
 echo 'deb https://download.ceph.com/debian-jewel xenial main' > /etc/apt/sources.list.d/ceph.list
 
 apt-get update
-apt-get -y upgrade
-apt-get -y install unzip librados-dev ceph-common curl make gcc
+apt-get -y                         upgrade
+apt-get -y --no-install-recommends install unzip librados-dev ceph-common curl make gcc
 # curl http://uwsgi.it/install | bash -s rados /usr/local/bin/uwsgi
 
 
