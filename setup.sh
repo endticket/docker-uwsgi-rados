@@ -2,7 +2,7 @@
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get                            update
-apt-get -y --no-install-recommends install wget
+apt-get -y --no-install-recommends install wget apt-transport-https
 
 wget --no-check-certificate https://download.ceph.com/keys/release.asc -O - | apt-key add -
 
