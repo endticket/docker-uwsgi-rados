@@ -11,7 +11,7 @@ echo 'deb https://download.ceph.com/debian-jewel xenial main' > /etc/apt/sources
 
 apt-get                            update
 apt-get -y                         upgrade
-apt-get -y --no-install-recommends install unzip librados2 librados-dev ceph-common curl make gcc
+apt-get -y --no-install-recommends install unzip librados2 librados-dev ceph-common curl make gcc build-essential
 # curl http://uwsgi.it/install | bash -s rados /usr/local/bin/uwsgi
 
 
@@ -23,7 +23,7 @@ cd uwsgi-master
 UWSGI_PROFILE=rados UWSGI_BIN_NAME=/usr/local/bin/uwsgi make
 
 
-apt-get -y purge librados-dev make gcc unzip
+apt-get -y purge librados-dev make gcc unzip build-essential
 apt-get -y autoremove
 
 rm -rf /var/lib/apt/lists/*
