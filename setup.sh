@@ -1,3 +1,6 @@
+
+export DEBIAN_FRONTEND=noninteractive
+
 apt-get update
 apt-get install -y wget
 
@@ -19,3 +22,4 @@ unzip uwsgi-master.zip
 cd uwsgi-master
 UWSGI_PROFILE=rados UWSGI_BIN_NAME=/usr/local/bin/uwsgi make
 
+rm -rf /var/lib/apt/lists/*
